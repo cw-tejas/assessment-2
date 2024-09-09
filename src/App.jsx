@@ -4,12 +4,12 @@ import "./App.css";
 import Listing from "./components/Listing/Listing";
 
 const fuelOptions = {
-  petrol: "1",
-  diesel: "2",
-  cng: "3",
-  lpg: "4",
-  electric: "5",
-  hybrid: "6",
+  Petrol: "1",
+  Diesel: "2",
+  CNG: "3",
+  LPG: "4",
+  Electric: "5",
+  Hybrid: "6",
 };
 
 const defaultFilter = {

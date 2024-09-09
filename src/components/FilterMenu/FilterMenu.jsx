@@ -41,6 +41,7 @@ const FilterMenu = ({ filter, setFilter, defaultFilter }) => {
 
       <div className="budget">
         <input
+          data-testid="min"
           type="number"
           onChange={handlePriceChange}
           value={filter.price.min}
@@ -51,6 +52,7 @@ const FilterMenu = ({ filter, setFilter, defaultFilter }) => {
         />
         <span>-</span>
         <input
+          data-testid="max"
           type="number"
           onChange={handlePriceChange}
           value={filter.price.max}
@@ -65,62 +67,62 @@ const FilterMenu = ({ filter, setFilter, defaultFilter }) => {
         <div>
           <input
             type="checkbox"
-            id="petrol"
-            value="petrol"
+            id="Petrol"
+            value="Petrol"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('petrol')}
+            checked={filter.fuel.includes('Petrol')}
           />
-          <label htmlFor="petrol">Petrol</label>
+          <label htmlFor="Petrol">Petrol</label>
         </div>
         <div>
           <input
             type="checkbox"
-            id="diesel"
-            value="diesel"
+            id="Diesel"
+            value="Diesel"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('diesel')}
+            checked={filter.fuel.includes('Diesel')}
           />
-          <label htmlFor="diesel">Diesel</label>
+          <label htmlFor="Diesel">Diesel</label>
         </div>
         <div>
           <input
             type="checkbox"
-            id="cng"
-            value="cng"
+            id="CNG"
+            value="CNG"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('cng')}
+            checked={filter.fuel.includes('CNG')}
           />
-          <label htmlFor="cng">CNG</label>
+          <label htmlFor="CNG">CNG</label>
         </div>
         <div>
           <input
             type="checkbox"
-            id="lpg"
-            value="lpg"
+            id="LPG"
+            value="LPG"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('lpg')}
+            checked={filter.fuel.includes('LPG')}
           />
-          <label htmlFor="lpg">LPG</label>
+          <label htmlFor="LPG">LPG</label>
         </div>
         <div>
           <input
             type="checkbox"
-            id="electric"
-            value="electric"
+            id="Electric"
+            value="Electric"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('electric')}
+            checked={filter.fuel.includes('Electric')}
           />
-          <label htmlFor="electric">Electric</label>
+          <label htmlFor="Electric">Electric</label>
         </div>
         <div>
           <input
             type="checkbox"
-            id="hybrid"
-            value="hybrid"
+            id="Hybrid"
+            value="Hybrid"
             onChange={handleFuelChange}
-            checked={filter.fuel.includes('hybrid')}
+            checked={filter.fuel.includes('Hybrid')}
           />
-          <label htmlFor="hybrid">Hybrid</label>
+          <label htmlFor="Hybrid">Hybrid</label>
         </div>
       </div>
     </div>
