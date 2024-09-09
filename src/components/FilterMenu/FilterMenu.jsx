@@ -1,7 +1,32 @@
 import React, { useEffect } from 'react';
 import './FilterMenu.css';
 
-const FilterMenu = ({ filter, handlePriceChange, handleClearFilters, handleFuelChange }) => {
+const FilterMenu = ({ filter, setFilter, defaultFilter }) => {
+  const handlePriceChange = (event) => {
+    const { name, value } = event.target;
+    setFilter((prevFilter) => ({
+      ...prevFilter,
+      price: {
+        ...prevFilter.price,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleClearFilters = () => {
+    setFilter(defaultFilter);
+  };
+
+  const handleFuelChange = (event) => {
+    const selectedFuel = event.target.value;
+    setFilter((prevFilter) => ({
+      ...prevFilter,
+      fuel: prevFilter.fuel.includes(selectedFuel)
+        ? prevFilter.fuel.filter((fuel) => fuel !== selectedFuel)
+        : [...prevFilter.fuel, selectedFuel],
+    }));
+  };
+
   return (
     <div className='filter'>
       <h1 className='title'>
